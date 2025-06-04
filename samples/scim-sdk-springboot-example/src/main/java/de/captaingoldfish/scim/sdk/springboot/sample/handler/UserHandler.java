@@ -120,7 +120,7 @@ public class UserHandler extends ResourceHandler<User>
                                                  List<SchemaAttribute> excludedAttributes,
                                                  Context context)
   {
-    List<User> resourceNodes = new ArrayList<>(inMemoryMap.values());
+    List<User> resourceNodes = new ArrayList<>();
     return PartialListResponse.<User> builder().resources(resourceNodes).totalResults(resourceNodes.size()).build();
   }
 
